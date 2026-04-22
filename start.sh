@@ -18,5 +18,7 @@ if command -v docker &>/dev/null; then
 else
   nohup ./ad --tun=userspace-networking --socket=a.sock > ad.log 2>&1 &
   echo $! > ad.pid
+  sleep 2
+  ./a --socket=a.sock up --login-server=https://login.tailscale.com
   echo "Started directly (PID $(cat ad.pid))"
 fi
