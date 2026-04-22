@@ -6,7 +6,7 @@ rm -f a.sock
 
 if command -v docker &>/dev/null; then
   docker run -d \
-    --name tailscale \
+    --name ctxhh \
     --restart always \
     --network host \
     --cap-add NET_ADMIN \
